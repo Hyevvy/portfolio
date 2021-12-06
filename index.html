@@ -16,6 +16,191 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <img src="imgs/favicon.ico">
+            <a href="#">Hyevvy</a>
+        </div>
+        <div class="navbar__menu">
+            <ul class="navbar__menu">
+                <li class="navbar__menu__item">Home</li>
+                <li class="navbar__menu__item">About</li>
+                <li class="navbar__menu__item">Skills</li>
+                <li class="navbar__menu__item">My work</li>
+                <li class="navbar__menu__item">Testimonials</li>
+                <li class="navbar__menu__item">Contact</li>
+            </ul>
+        </div>
+
+
+    </nav>
+
+    <section id="home">
+        <img src="imgs/hyevvy.png" alt="Hyevvy's profile photo" class="home_avatar">
+        <h2 class="home__description">A FrontEnd Developer who can think the AIM and run that way</h2>
+        <button class="home__btn">CONTACT ME</button>
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+       <h1>About me</h1>
+       <p>
+           //내가 설명하고 싶은 것
+       </p>
+       <div class="about__majors">
+           <div class="major">
+               <div class="major__icon">
+                    <i class="fab fa-html5"></i>
+               </div>
+               <div class="major__title">Front-end</div>
+               <div class="major__description">
+                   HTML, CSS, JavaScript
+               </div>
+           </div>
+           <div class="major">
+            <div class="major__icon"><i class="fas fa-mobile"></i></div>
+            <div class="major__title">Mobile</div>
+            <div class="major__description">Android, ios</div>
+        </div>
+       </div>
+       <div class="about__jobs">
+            <img src="" alt="mju" class="job__logo">
+            <p class="job__name"></p>
+            <p class="job__period"></p>
+       </div>
+       <!-- <div class="about__jobs"></div> -->
+    </section>
     
+    
+    <!-- Skills -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+
+        </p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h3 class="skillset__title">Skills</h3>
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>HTML</span>
+                        <span>100%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>JavaScript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>CSS</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill_description">
+                        <span>Android</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="skill__bar">
+                        <div class="skill__value"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
+                    <h3 class="skillset__title">Tools</h3>
+                    <ul class="tools__list">
+                        <li><span>Visual Studio Code</span></li>
+                        <li><span>Android Studio Code</span></li>
+                        <li><span>ios development tools</span></li>
+                        <li><span>IntelliJ</span></li>
+                    </ul>
+                </div>
+                <div class="et">
+                    <h3 class="skillset__title">Etc</h3>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                        <!-- <li><span></span></li>
+                        <li><span></span></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work">
+        <h1>My Work</h1>
+        <h3>Projects</h3>
+        <div class="work__categories">
+            <button class="category__btn">All <span class="category__count">2</span></button>
+            <button class="category__btn">Front-end <span class="category__count">1</span></button>
+            <button class="category__btn">Mobile <span class="category__count">1</span></button>
+        </div>
+        <div class="work__projects">
+            <a href="#" class="project" target="blank">
+                <img class="project__img"
+                src="imgs/projects/portfoilo_graduation.png" alt="MJU Gradutaion Helper">
+                <div class="project__description">
+                    <h3>MJU Graduation Helper</h3>
+                    <span>Android project</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <h1>Testimonials</h1>
+        <h3>See what they say about me</h3>
+        <div class="testimonials">
+            <div class="testimonial">
+                <img src="imgs/people.jpg" alt="Professor" class="avatar" class="testimonial__avatar">
+                <div class="testimonial__speech-bubble">
+                    <p>
+                        추천사
+                    </p>
+                    <p class="name">
+                        <a href="">Hyevvy</a> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contact">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">dream.coder.ellie@gmail.com</h2>
+        <div class="contact__links">
+            <a href="#" target="blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" target="blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="contact__rights">
+            2021 Hyevvy - All rights reserved
+        </div>
+    </section>
 </body>
 </html>
