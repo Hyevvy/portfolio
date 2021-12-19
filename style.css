@@ -393,3 +393,12 @@
     }
 
   
+    /* Testimonial */
+   #tesimonials{
+       background-color: var(--color-light-white);
+   }
+
+   .testimonials{
+       margin:40px;
+
+   }
