@@ -1,4 +1,5 @@
 "use strict";
+const navbarMenu = document.querySelector(".navbar__menu");
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 const contact = document.querySelector("#contact");
@@ -7,6 +8,7 @@ const about = document.querySelector("#about");
 const work = document.querySelector("#work");
 const skills = document.querySelector("#skills");
 const testimonails = document.querySelector("#testimonials");
+const homeBtn = document.querySelector(".home__btn");
 
 // Make navbar transparent when it is on the top
 document.addEventListener("scroll", () => {
@@ -17,18 +19,29 @@ document.addEventListener("scroll", () => {
   }
 });
 
-//Handle scrolling when tapping on the navbar menu
-const homeBtn = document.querySelector(".home__btn");
+//Handle homeBtn and scrolling when tapping on the navbar menu
 homeBtn.addEventListener("click", (e) => {
-  window.scrollTo({ top: contact.offsetTop, behavior: "smooth" });
+  scrollIntoView("#contact");
 });
-const navbarMenu = document.querySelector(".navbar__menu");
+
 navbarMenu.addEventListener("click", (e) => {
   const target = e.target;
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
-  const item = document.querySelector(link);
-  window.scrollTo({ top: item.offsetTop, behavior: "smooth" });
+  scrollIntoView(link);
 });
+
+//Make home transparent when window scroll down
+const homeContainer = document.querySelector(".home__container");
+document.addEventListener("scroll", () => {
+  const homeHeight = homeContainer.getBoundingClientRect().height;
+  const homeOpacity = 1 - window.scrollY / homeHeight;
+  homeContainer.style.opacity = homeOpacity;
+});
+
+function scrollIntoView(selector) {
+  const item = document.querySelector(selector);
+  window.scrollTo({ top: item.offsetTop, behavior: "smooth" });
+}

@@ -148,6 +148,11 @@ p {
   padding: 40px;
   padding-top: 140px;
   text-align: center;
+  translate: all var(--animation-duration) ease-in;
+}
+
+.home__bar--transparent {
+  opacity: 0;
 }
 
 .home_avatar {
