@@ -52,6 +52,32 @@ arrowBtn.addEventListener("click", (e) => {
   scrollIntoView("#home");
 });
 
+//Make categories work
+const workCategory = document.querySelector(".work__categories");
+const categories = document.querySelectorAll(".category__btn");
+const projects = document.querySelectorAll(".project");
+const projectContainer = document.querySelector(".work__projects");
+
+workCategory.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  projectContainer.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 300);
+
+  console.log(filter);
+});
+
 function scrollIntoView(selector) {
   const item = document.querySelector(selector);
   window.scrollTo({ top: item.offsetTop, behavior: "smooth" });

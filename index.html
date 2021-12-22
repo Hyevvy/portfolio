@@ -177,21 +177,35 @@
         <h1>My Work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn active">
-            All<span class="category__count">2</span>
+          <button class="category__btn active" data-filter="*">
+            All<span class="category__count">3</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="front-end">
             Front-end<span class="category__count">1</span>
           </button>
-          <button class="category__btn">
+          <button class="category__btn" data-filter="mobile">
             Mobile<span class="category__count">2</span>
           </button>
         </div>
         <div class="work__projects">
+          <!--TODO: portfolio 사진 변경-->
+          <a href="#" class="project" target="blank" data-type="front-end">
+            <img
+              class="project__img"
+              src="imgs/checkWithHeart.png"
+              alt="MJU Gradutaion Helper"
+            />
+            <div class="project__description">
+              <h3>My portfolio</h3>
+              <span>HTML, CSS, JS, Responsive</span>
+            </div>
+          </a>
+
           <a
             href="https://github.com/Hyevvy/mjuGraduationHelperForAndroid"
             class="project"
             target="blank"
+            data-type="mobile"
           >
             <img
               class="project__img"
@@ -205,7 +219,7 @@
           </a>
 
           <!-- TODO: img 변경 -->
-          <a href="#" class="project" target="blank">
+          <a href="#" class="project" target="blank" data-type="mobile">
             <img
               class="project__img"
               src="imgs/heart.png"
