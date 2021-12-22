@@ -9,6 +9,7 @@ const work = document.querySelector("#work");
 const skills = document.querySelector("#skills");
 const testimonails = document.querySelector("#testimonials");
 const homeBtn = document.querySelector(".home__btn");
+const arrowBtn = document.querySelector(".arrowBtn");
 
 // Make navbar transparent when it is on the top
 document.addEventListener("scroll", () => {
@@ -35,10 +36,20 @@ navbarMenu.addEventListener("click", (e) => {
 
 //Make home transparent when window scroll down
 const homeContainer = document.querySelector(".home__container");
+const homeHeight = homeContainer.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
-  const homeHeight = homeContainer.getBoundingClientRect().height;
   const homeOpacity = 1 - window.scrollY / homeHeight;
   homeContainer.style.opacity = homeOpacity;
+});
+
+//Make ArrowButton possible when scroll down
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowBtn.classList.add("visible");
+  } else arrowBtn.classList.remove("visible");
+});
+arrowBtn.addEventListener("click", (e) => {
+  scrollIntoView("#home");
 });
 
 function scrollIntoView(selector) {

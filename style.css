@@ -474,6 +474,26 @@ p {
   color: var(--color-yellow);
 }
 
+.arrowBtn {
+  font-size: 60px;
+  color: var(--color-pink);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 15px;
+  right: 50px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: all var(--animation-duration) ease-in;
+}
+
+.arrowBtn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /*화면이 작아지면 navbar와 about me 한줄에 하나씩만 나오도록*/
 
 @media screen and (max-width: 768px) {
