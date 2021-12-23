@@ -7,7 +7,7 @@ const home = document.querySelector("#home");
 const about = document.querySelector("#about");
 const work = document.querySelector("#work");
 const skills = document.querySelector("#skills");
-const testimonails = document.querySelector("#testimonials");
+const testimonials = document.querySelector("#testimonials");
 const homeBtn = document.querySelector(".home__btn");
 const arrowBtn = document.querySelector(".arrowBtn");
 
@@ -93,6 +93,7 @@ workCategory.addEventListener("click", (e) => {
 });
 
 
+//Make navbar highlight when scroll 
 
 function scrollIntoView(selector) {
   const item = document.querySelector(selector);
