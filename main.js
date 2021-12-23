@@ -31,8 +31,17 @@ navbarMenu.addEventListener("click", (e) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
 });
+
+
+/*Navbar toggle button for small screen*/
+const toggleBtn = document.querySelector('.navbar__toggle-btn');
+
+toggleBtn.addEventListener('click', (e)=>{
+  navbarMenu.classList.toggle('open');
+})
 
 //Make home transparent when window scroll down
 const homeContainer = document.querySelector(".home__container");
@@ -83,7 +92,10 @@ workCategory.addEventListener("click", (e) => {
   }, 300);
 });
 
+
+
 function scrollIntoView(selector) {
   const item = document.querySelector(selector);
   window.scrollTo({ top: item.offsetTop, behavior: "smooth" });
 }
+
