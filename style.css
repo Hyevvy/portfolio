@@ -459,10 +459,12 @@ p {
 
 .testimonial__speech-bubble p {
   color: var(--color-light-gray);
+  font-family: 'Do Hyeon', sans-serif;
 }
 
 .testimonial__speech-bubble a {
   color: var(--color-pink);
+  font-family: 'Do Hyeon', sans-serif;
 }
 
 /*Contact*/
