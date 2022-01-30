@@ -155,9 +155,12 @@ p {
   opacity: 0;
 }
 
+
 .home_avatar {
-  width: 350px;
-  height: 350px;
+
+  width:300px;
+  height:auto;
+  object-fit:contain;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
